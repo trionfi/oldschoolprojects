@@ -1,0 +1,20 @@
+b.)
+algorithm LowestCommonAncestor(node P, Node Q){
+var lca = null;
+list NodePparents = new List();
+
+while(P.parent() != null){
+	NodePparents.add(P)
+	P = P.parent();
+}
+
+while(Q.parent() != null){
+	if(NodePparents.has(Q)) {//implies list has some kind of searching function
+		lca = Q
+		break;
+	}
+	}
+return lca;
+}
+
+would run in O(n), with n being the height of the tree. A balanced Binary tree would be the shortest run time, at O(log n)

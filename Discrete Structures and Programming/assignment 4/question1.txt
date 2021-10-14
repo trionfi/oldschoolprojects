@@ -1,0 +1,9 @@
+1.
+a. When increasing the size of an array, you are only using one loop to increase the size.
+As one loop will always be O(n), and doubling a O(n), no matter how many times you do it would only add the current number of interations to the total.
+Thus, the runtime is n + 1 + 2 + 4 + 8 + ... + 2^k = n + 2^k+1 - 1 = 2n - 1, which is O(n).
+
+b. If n is a power of two, the recusion will continue to loop until n = 2, at which point the the program will output B[0].
+example: if n = 16, then interations would go 8 + 4 + 2 + 1 = 15
+n - 1 = n/2 + n/2/2 + n/2/2/2 + .... + n/2^(n^1/2)
+As O(n-1) = O(n), the run time is O(n).
